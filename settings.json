@@ -1,0 +1,27 @@
+{
+  "DefaultAnswers": [
+        "Yes",
+        "No",
+        "I see, {name}. That must be troubling.",
+        "Can you explain that a little more?",
+        "Have you turned it off and on again?",
+        "My favourite cheese is Gouda, but I do also like Brie.",
+        "Hmm. Let me see, {name}.",
+        "Please wait a moment while I check."
+    ],
+  "ExitWords": [
+        "bye",
+        "exit",
+        "quit",
+        "q",
+        "help"
+  ],
+  "Responses" : [
+    {
+      "cheese": "There is an excellent cheese shop in the Student Union Building.",
+      "coffee": "The coffee bar closes at 5.",
+      "dog": "No problem, {name}! Dogs are welcome on campus, but not in the Library.",
+      "wifi": "We have excellent WiFi coverage across the campus."
+    }
+  ]
+}
