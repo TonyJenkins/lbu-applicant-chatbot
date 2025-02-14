@@ -50,9 +50,9 @@ def get_user_name():
 
 
 def generate_agent_name():
-    from faker import Faker
+    possible_names = json.load(open(SETTINGS_FILE, 'r'))['OperatorNames']
 
-    return Faker('en_GB').first_name()
+    return choice(possible_names)
 
 
 def user_wants_to_exit(the_question):

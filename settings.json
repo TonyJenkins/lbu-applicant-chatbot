@@ -1,4 +1,18 @@
 {
+  "OperatorNames": [
+    "Agnes",
+    "Brian",
+    "Cathy",
+    "David",
+    "Eva",
+    "Frank",
+    "Gina",
+    "Harry",
+    "Irene",
+    "John",
+    "Kathy"
+  ],
+
   "DefaultAnswers": [
         "Yes",
         "No",
@@ -9,6 +23,7 @@
         "Hmm. Let me see, {name}.",
         "Please wait a moment while I check."
     ],
+
   "ExitWords": [
         "bye",
         "exit",
@@ -16,6 +31,7 @@
         "q",
         "help"
   ],
+
   "Responses" : [
     {
       "cheese": "There is an excellent cheese shop in the Student Union Building.",
