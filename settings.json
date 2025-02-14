@@ -18,8 +18,9 @@
         "No",
         "I see, {name}. That must be troubling.",
         "Can you explain that a little more?",
-        "Have you turned it off and on again?",
-        "My favourite cheese is Gouda, but I do also like Brie.",
+        "I can see the issue. Could you expand slightly?",
+        "I'm sorry, I don't understand. Could you explain further?",
+        "I'm sorry, I don't have that information. Would you like me to look it up?",
         "Hmm. Let me see, {name}.",
         "Please wait a moment while I check."
     ],
@@ -34,9 +35,11 @@
 
   "Responses" : [
     {
-      "cheese": "There is an excellent cheese shop in the Student Union Building.",
-      "coffee": "The coffee bar closes at 5.",
+      "breakfast": "The cafeteria in the Student Union Building is excellent for breakfast.",
+      "bus": "The bus stop is located at the side of James Graham Building. There is also a free bus to City Campus.",
+      "coffee": "Tiki in the Student Union can provide for all your coffee needs.",
       "dog": "No problem, {name}! Dogs are welcome on campus, but not in the Library.",
+      "library": "The Library is located in the James Graham Building. It is open from 8am to 10pm.",
       "wifi": "We have excellent WiFi coverage across the campus."
     }
   ]
