@@ -14,6 +14,15 @@ def generate_log_file_name():
     return f'{datetime.now().strftime("%Y%m%d-%H%M%S")}.log'
 
 
+def start_log_file(logfile):
+    write_to_log(logfile, 'SYSTEM', 'Chat Started')
+
+
+def log_users(logfile, user_name, agent_name):
+    write_to_log(logfile, 'SYSTEM', f'User identified as {user_name}')
+    write_to_log(logfile, 'SYSTEM', f'Agent identified as {agent_name}')
+
+
 def write_to_log(logfile, actor, message):
     from datetime import datetime
 
@@ -82,21 +91,12 @@ def generate_random_response(name):
     return random_answer.replace('{name}', name)
 
 
-if __name__ == '__main__':
-
-    logfile = generate_log_file_name()
-    write_to_log(logfile, 'SYSTEM', 'Chat Started')
-
-    banner_print('Welcome to Poppleton Chat!')
-
-    user_name = get_user_name()
-    agent_name = generate_agent_name()
-
-    write_to_log(logfile, 'SYSTEM', f'User identified as {user_name}')
-    write_to_log(logfile, 'SYSTEM', f'Agent identified as {agent_name}')
-
+def print_friendly_greeting(user_name, agent_name):
+    banner_print('Welcome to LBU Applicant Chat!')
     print(f'Greetings, {user_name}. I am {agent_name}. How may I serve you? ')
 
+
+def respond_to_questions(user_name, agent_name, logfile):
     while True:
         question = input('--> ')
 
@@ -111,7 +111,25 @@ if __name__ == '__main__':
             print(response)
             write_to_log(logfile, f'Agent: {agent_name}', response)
 
-    banner_print('Thanks for using Poppleton Chat!')
+
+def say_farewell(user_name, logfile):
+    banner_print(f'Thanks for using LBU Chat, {user_name}!')
     write_to_log(logfile, 'SYSTEM', 'Chat Ended')
 
     banner_print(f'A log has been written to "{logfile}".')
+
+
+def be_the_lbu_chatbot():
+    logfile = generate_log_file_name()
+    start_log_file(logfile)
+
+    user_name, agent_name = get_user_name(), generate_agent_name()
+    log_users(logfile, user_name, agent_name)
+
+    print_friendly_greeting(user_name, agent_name)
+    respond_to_questions(user_name, agent_name, logfile)
+    say_farewell(user_name, logfile)
+
+
+if __name__ == '__main__':
+    be_the_lbu_chatbot()
