@@ -8,6 +8,15 @@ from random import choice
 SETTINGS_FILE = 'settings.json'
 
 
+def check_settings_file():
+    try:
+        json.load(open(SETTINGS_FILE, 'r'))['ExitWords']
+    except FileNotFoundError:
+        raise FileNotFoundError('Settings file not found.')
+    except json.decoder.JSONDecodeError:
+        raise RuntimeError('Settings file is not a valid JSON file.')
+
+
 def generate_log_file_name():
     from datetime import datetime
 
@@ -120,6 +129,16 @@ def say_farewell(user_name, logfile):
 
 
 def be_the_lbu_chatbot():
+    try:
+        check_settings_file()
+    except FileNotFoundError:
+        print('ERROR: Settings file not found. Exiting...')
+    except RuntimeError:
+        print('ERROR: Cannot start, Most likely a JSON problem in Settings. Exiting...')
+    else:
+        run_chatbot()
+
+def run_chatbot():
     logfile = generate_log_file_name()
     start_log_file(logfile)
 
