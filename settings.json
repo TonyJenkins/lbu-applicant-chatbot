@@ -22,7 +22,10 @@
         "I'm sorry, I don't understand. Could you explain further?",
         "I'm sorry, I don't have that information. Would you like me to look it up?",
         "Hmm. Let me see, {name}.",
-        "Please wait a moment while I check."
+        "Please wait a moment while I check.",
+        "I'm not sure. Would you like me to find out?",
+        "I'm not sure. Would you like me to look it up?",
+        "I'm not sure. Would you like me to check?",
     ],
 
   "ExitWords": [
@@ -40,6 +43,7 @@
       "coffee": "Tiki in the Student Union can provide for all your coffee needs.",
       "dog": "No problem, {name}! Dogs are welcome on campus, but not in the Library.",
       "library": "The Library is located in the James Graham Building. It is open from 8am to 10pm.",
+      "parking": "There is a car park at the front of the James Graham Building. It is free for the first 2 hours.",
       "wifi": "We have excellent WiFi coverage across the campus."
     }
   ]
